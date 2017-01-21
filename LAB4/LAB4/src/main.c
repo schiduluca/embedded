@@ -18,9 +18,12 @@ int main(void)
 	  while(1) {
 
 		  if(isButtonOnePressed()) {
+			  L293_clockwise();
+		  } else if(isButtonTwoPressed()) {
 			  L293_antiClockwise();
 		  } else {
-			  L293_clockwise();
+			  L293_stop();
 		  }
+
 	  }
 }
